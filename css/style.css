@@ -2,9 +2,11 @@
 html,
 body {
   height: 100%;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
   line-height: 1;
-  font-size: 16px;
-  color: #000;
+  color: #252b42;
 }
 *,
 *::before,
@@ -34,7 +36,48 @@ h6 {
   font-weight: inherit;
   font-size: inherit;
 }
+/* Main Style */
 .wrapper {
   min-height: 100%;
   overflow: hidden;
+}
+._container {
+  max-width: 1046px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: content-box;
+}
+.header {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 50;
+}
+.header__container {
+  display: flex;
+  min-height: 104px;
+  align-items: center;
+}
+.header__logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: inherit;
+}
+.header__menu {
+  margin-left: 133px;
+}
+.menu {
+}
+.menu__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.menu__item:not(:last-child) {
+  margin-right: 21px;
+}
+.menu__link {
+  font-weight: 600;
+  color: #737373;
+  line-height: 1.71;
 }
