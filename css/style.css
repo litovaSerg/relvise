@@ -40,6 +40,8 @@ h6 {
 .wrapper {
   min-height: 100%;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 ._container {
   max-width: 1046px;
@@ -47,6 +49,7 @@ h6 {
   padding: 0 15px;
   box-sizing: content-box;
 }
+/* --------------Header----------------------------- */
 .header {
   position: absolute;
   width: 100%;
@@ -59,6 +62,11 @@ h6 {
   min-height: 104px;
   align-items: center;
 }
+@media (max-width: 479px) {
+  .header__container {
+    min-height: 70px;
+  }
+}
 .header__logo {
   font-size: 24px;
   font-weight: 700;
@@ -67,7 +75,23 @@ h6 {
 .header__menu {
   margin-left: 133px;
 }
+@media (max-width: 992px) {
+  .header__menu {
+    margin-left: 80px;
+  }
+}
+@media (max-width: 767px) {
+  .header__menu {
+    margin-left: 40px;
+  }
+}
+@media (max-width: 479px) {
+  .header__menu {
+    margin-left: 20px;
+  }
+}
 .menu {
+  padding: 5px 0;
 }
 .menu__list {
   display: flex;
@@ -81,3 +105,18 @@ h6 {
   color: #737373;
   line-height: 1.71;
 }
+@media (max-width: 479px) {
+  .menu__link {
+    font-size: 18px;
+  }
+}
+/* ---------------End Header--------------------- */
+/* ---------------Page------------------------------ */
+.page {
+  flex: 1 1 auto;
+}
+/* ---------------End Main----------------------------------- */
+/* ---------------Footer------------------------------ */
+.footer {
+}
+/* ---------------End Footer---------------------------------- */
