@@ -120,7 +120,6 @@ h6 {
   .menu__link {
     font-size: 18px;
     color: #000;
-    text-decoration: underline;
   }
 }
 /* ---------------End Header--------------------- */
@@ -129,6 +128,11 @@ h6 {
   flex: 1 1 auto;
 }
 .page__main-block {
+}
+.page__services {
+  position: relative;
+  z-index: 2;
+  margin-top: -111px;
 }
 /* --------------Main Block------------------------------- */
 .main-block {
@@ -146,6 +150,13 @@ h6 {
 @media (max-width: 992px) {
   .main-block__body {
     padding-top: 120px;
+    padding-bottom: 191px;
+  }
+}
+@media (max-width: 479px) {
+  .main-block__body {
+    padding-top: 115px;
+    padding-bottom: 160px;
   }
 }
 .main-block__body > *:not(:last-child) {
@@ -242,6 +253,81 @@ h6 {
   }
 }
 /* ---------------End Main Block-------------------------------------------- */
+/* ---------------Services Block-------------------------------------------- */
+.services {
+}
+.services__container {
+}
+.services__body {
+}
+@media (min-width: 670px) {
+  .services__body {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px -30px;
+  }
+}
+.services__column {
+  margin-bottom: 30px;
+  flex: 0 1 33.333%;
+}
+@media (max-width: 992px) {
+  .services__column {
+    flex: 0 1 50%;
+  }
+}
+@media (max-width: 992px) {
+  .services__column:last-child {
+    flex: 0 1 100%;
+    /* margin-bottom: 30px; */
+  }
+}
+@media (min-width: 670px) {
+  .services__column {
+    padding: 0 15px;
+  }
+}
+@media (max-width: 669px) {
+  .services__column:last-child {
+    margin-bottom: 0;
+  }
+}
+.services__item {
+  height: 100%;
+  padding: 35px 40px;
+  background-color: #fff;
+  box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+}
+.item-service {
+}
+.item-service > *:not(:last-child) {
+  margin-bottom: 10px;
+}
+.item-service--green {
+  background-color: #0d5c63;
+}
+.item-service__icon {
+}
+.item-service__title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.33;
+  letter-spacing: 0.1px;
+}
+.item-service__text {
+  font-weight: 500;
+  line-height: 1.43;
+  letter-spacing: 0.2px;
+  color: #737373;
+}
+.item-service--green .item-service__text,
+.item-service--green .item-service__title {
+  color: #fff;
+}
+/* ---------------End Services Block---------------------------------------- */
+/* ---------------Advantages Block---------------------------------------- */
+
+/* ---------------End Advantages Block---------------------------------------- */
 
 /* ---------------End Page----------------------------------- */
 /* ---------------Footer------------------------------ */
