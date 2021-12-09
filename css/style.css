@@ -115,6 +115,8 @@ h6 {
 }
 .page__practice {
 }
+.page__clients {
+}
 .header-block {
   text-align: center;
   line-height: 1.42;
@@ -187,6 +189,9 @@ h6 {
   line-height: 1.5;
   border-radius: 37px;
   letter-spacing: 0.2px;
+}
+.main-block__button:not(:last-child) {
+  margin-right: 10px;
 }
 .main-block__button--orange {
   color: #fff;
@@ -297,7 +302,7 @@ h6 {
 /* ---------------End Advantages Block------------------------ */
 /* ----------------Practice Block-------------------------- */
 .practice {
-  padding: 125px 0 80px 0;
+  padding: 125px 0 81px 0;
 }
 .practice__container {
 }
@@ -352,13 +357,11 @@ h6 {
 /* ----------------End Practice Block--------------------*/
 /* ----------------WhoWeAre Block-----------------------*/
 .whoweare {
-  padding: 100px 0;
+  padding: 100px 0 136px 0;
   background-color: #fff;
 }
 .whoweare__header {
   margin-bottom: 100px;
-}
-.header-block {
 }
 .whoweare__header .header-block__title {
   margin-bottom: 15px;
@@ -432,7 +435,24 @@ h6 {
   letter-spacing: 0.2px;
   color: #737373;
 }
-/* ----------------End WhoWeAre Block-------------------*/
+/* ----------------End WhoWeAre Block---------------*/
+/* ----------------Clients Block-------------------*/
+.clients {
+  padding: 58px 0;
+}
+.clients__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.clients__item {
+  padding: 10px 0;
+}
+.clients__item img {
+  max-width: 100%;
+}
+/* ----------------End Clients Block-------------------*/
 
 /* ---------------End Page------------------------------ */
 /* ---------------Footer------------------------------ */
@@ -540,6 +560,9 @@ h6 {
   .advantages__header {
     margin-bottom: 25px;
   }
+  .clients {
+    padding: 20px 0;
+  }
 }
 @media (min-width: 670px) {
   .services__body {
@@ -603,5 +626,12 @@ h6 {
   }
   .whoweare__items {
     margin: 25px 0;
+  }
+  .clients__item {
+    padding: 10px 15px;
+  }
+  .clients__item {
+    min-width: 140px;
+    text-align: center;
   }
 }
