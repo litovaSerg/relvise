@@ -146,6 +146,8 @@ h6 {
 }
 .page__subscribe {
 }
+.page__getintouch {
+}
 /* ---------------End Common Blocks----------------*/
 /* --------------Main Block------------------------------- */
 .main-block {
@@ -529,6 +531,87 @@ input[type="email"]::-moz-placeholder {
   letter-spacing: 0.2px;
 }
 /* ----------------End Subscribe Block----------------*/
+/* ----------------Get In Touch Block----------------*/
+.getintouch {
+  padding: 80px 0 135px 0;
+}
+.getintouch__items {
+  margin: 0 -15px;
+}
+.getintouch__header {
+  margin-bottom: 80px;
+}
+.getintouch__container {
+}
+.getintouch__item {
+  flex: 0 1 33.333%;
+}
+.item-getintouch {
+  padding: 50px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+.item-getintouch > *:not(:last-child) {
+  margin-bottom: 15px;
+}
+.item-getintouch--active {
+  padding: 80px 15px;
+  background-color: #252b42;
+  color: #fff;
+}
+.item-getintouch__icon {
+}
+.item-getintouch__emails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.item-getintouch__email {
+  font-weight: 600;
+  color: inherit;
+  line-height: 1.7;
+  letter-spacing: 0.2px;
+}
+.item-getintouch__email:hover {
+  text-decoration: underline;
+}
+.item-getintouch__support {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.1px;
+}
+.item-getintouch__button {
+  min-height: 44px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #ff7b47;
+  border-radius: 5px;
+  color: #ff7b47;
+  line-height: 1.7;
+  letter-spacing: 0.2px;
+  transition: all 0.4s ease 0s;
+}
+.item-getintouch__button:hover {
+  background-color: #ff7b47;
+  color: #fff;
+}
+.item-getintouch:hover .item-getintouch__button {
+  border: 1px solid #fff;
+  color: #fff;
+}
+.item-getintouch--active .item-getintouch__button {
+  border: 1px solid #fff;
+  color: #fff;
+}
+/* ----------------End Get In Touch Block--------------*/
 
 /* ---------------End Page------------------------------ */
 /* ---------------Footer------------------------------ */
@@ -567,6 +650,13 @@ input[type="email"]::-moz-placeholder {
     padding: 0 0 40px;
   }
 }
+@media (min-width: 992px) {
+  .getintouch__items {
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+}
 @media (max-width: 992px) {
   .header-block__title {
     font-size: 35px;
@@ -593,6 +683,15 @@ input[type="email"]::-moz-placeholder {
   }
   .advantages {
     padding: 50px 0;
+  }
+  .getintouch {
+    padding: 30px 0 30px 0;
+  }
+  .getintouch__header {
+    margin-bottom: 30px;
+  }
+  .item-getintouch--active {
+    padding: 50px 15px;
   }
 }
 @media (max-width: 950px) {
