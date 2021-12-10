@@ -148,6 +148,8 @@ h6 {
 }
 .page__getintouch {
 }
+.page__contact {
+}
 /* ---------------End Common Blocks----------------*/
 /* --------------Main Block------------------------------- */
 .main-block {
@@ -534,11 +536,13 @@ input[type="email"]::-moz-placeholder {
 /* ----------------Get In Touch Block----------------*/
 .getintouch {
   padding: 80px 0 135px 0;
+  /* background-color: #f3f3f3; */
 }
 .getintouch__items {
-  margin: 0 -15px;
+  padding: 0 32px;
 }
 .getintouch__header {
+  padding: 0 5px;
   margin-bottom: 80px;
 }
 .getintouch__container {
@@ -612,6 +616,47 @@ input[type="email"]::-moz-placeholder {
   color: #fff;
 }
 /* ----------------End Get In Touch Block--------------*/
+/* ----------------Contact Block--------------*/
+.contact {
+  padding: 40px 0;
+}
+.contact__container {
+}
+.contact__body {
+  display: flex;
+  justify-content: space-between;
+}
+.contact__content {
+}
+.contact__title {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.33;
+  letter-spacing: 0.1px;
+}
+.contact__text {
+  font-weight: 500;
+  line-height: 1.42;
+  color: #737373;
+  letter-spacing: 0.2px;
+}
+.contact__button {
+  min-height: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 40px;
+  margin-right: 32px;
+  font-weight: 700;
+  line-height: 2;
+  letter-spacing: 0.2px;
+  background-color: #ff7b47;
+  color: #fff;
+  border-radius: 5px;
+}
+/* ----------------End Contact Block--------------*/
 
 /* ---------------End Page------------------------------ */
 /* ---------------Footer------------------------------ */
@@ -652,7 +697,6 @@ input[type="email"]::-moz-placeholder {
 }
 @media (min-width: 992px) {
   .getintouch__items {
-    margin: 0;
     display: flex;
     align-items: center;
   }
@@ -679,7 +723,6 @@ input[type="email"]::-moz-placeholder {
   }
   .services__column:last-child {
     flex: 0 1 100%;
-    /* margin-bottom: 30px; */
   }
   .advantages {
     padding: 50px 0;
@@ -692,6 +735,22 @@ input[type="email"]::-moz-placeholder {
   }
   .item-getintouch--active {
     padding: 50px 15px;
+  }
+  .contact {
+    padding: 10px 0;
+  }
+  .contact__body {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact__content {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .contact__button {
+    width: 55%;
+    margin-right: 0;
   }
 }
 @media (max-width: 950px) {
