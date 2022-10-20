@@ -29,7 +29,7 @@
                 <a href="#" class="menu__link">Pricing</a>
               </li>
               <li class="menu__item">
-                <a href="#" class="menu__link">Contact</a>
+                <a href="#" data-contact class="menu__link">Contact</a>
               </li>
             </ul>
           </nav>
@@ -396,7 +396,7 @@
                 <h4 class="contact__title">Consulting Agency For Your Business</h4>
                 <p class="contact__text">the quick fox jumps over the lazy dog</p>
               </div>
-              <a href="#" class="contact__button">Contact Us</a>
+              <a href="#" data-contact class="contact__button">Contact Us</a>
             </div>
           </div>
         </section>
@@ -482,6 +482,19 @@
           </div>
         </div>
       </footer>
+      <div class="modal">
+        <div class="modal__dialog">
+          <div class="modal__content">
+            <form action="#">
+              <div data-close class="modal__close">&times;</div>
+              <div class="modal__title">Мы свяжемся с вами как можно быстрее!</div>
+              <input required placeholder="Ваше имя" name="name" type="text" class="modal__input" />
+              <input required placeholder="Ваш номер телефона" name="phone" type="phone" class="modal__input" />
+              <button class="btn btn_dark btn_min">Перезвонить мне</button>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="js/script.js"></script>
   </body>
