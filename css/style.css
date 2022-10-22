@@ -61,6 +61,12 @@ h6 {
   left: 0;
   object-fit: cover;
 }
+.scale {
+  position: fixed;
+  /* width: 20%; */
+  height: 5px;
+  background-color: #ff7b47;
+}
 /* --------------Header----------------------------- */
 .header {
   position: absolute;

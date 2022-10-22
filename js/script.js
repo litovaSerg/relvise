@@ -57,5 +57,30 @@ document.addEventListener('DOMContentLoaded', () => {
       window.removeEventListener('scroll', showMOdalScroll);
     }
   }
-  window.addEventListener('scroll', showMOdalScroll);
+  // window.addEventListener('scroll', showMOdalScroll);
+
+  // * Scroll scale
+
+  // scale.style.width = '100%';
+  // document.querySelector('.scale').style.width = '100%';
+
+  function scaleAnimation() {
+    const scale = document.querySelector('.scale');
+    const id = setInterval(scaleFrame, 10);
+    function scaleFrame() {
+      if (
+        Math.trunc(
+          (window.pageYOffset + document.documentElement.clientHeight) / document.documentElement.scrollHeight
+        ) == 1
+      ) {
+        clearInterval(id);
+        console.log('timer stop');
+      } else {
+        scale.style.width =
+          ((window.pageYOffset + document.documentElement.clientHeight) / document.documentElement.scrollHeight) * 100 +
+          '%';
+      }
+    }
+  }
+  window.addEventListener('scroll', scaleAnimation);
 });
