@@ -60,25 +60,27 @@ document.addEventListener('DOMContentLoaded', () => {
   // window.addEventListener('scroll', showMOdalScroll);
 
   // * Scroll scale
+  const scale = document.querySelector('.scale');
 
-  // scale.style.width = '100%';
-  // document.querySelector('.scale').style.width = '100%';
+  function getPercent() {
+    let scalePercent =
+      ((window.pageYOffset + document.documentElement.clientHeight) / document.documentElement.scrollHeight) * 100;
+    scale.style.width = scalePercent + '%';
+    // scale.textContent = Math.round(scalePercent) + ' ' + '%';
+  }
+  getPercent();
 
   function scaleAnimation() {
-    const scale = document.querySelector('.scale');
     const id = setInterval(scaleFrame, 10);
     function scaleFrame() {
       if (
         Math.trunc(
           (window.pageYOffset + document.documentElement.clientHeight) / document.documentElement.scrollHeight
-        ) == 1
+        ) >= 1
       ) {
         clearInterval(id);
-        console.log('timer stop');
       } else {
-        scale.style.width =
-          ((window.pageYOffset + document.documentElement.clientHeight) / document.documentElement.scrollHeight) * 100 +
-          '%';
+        getPercent();
       }
     }
   }

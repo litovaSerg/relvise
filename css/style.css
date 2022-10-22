@@ -63,9 +63,9 @@ h6 {
 }
 .scale {
   position: fixed;
-  /* width: 20%; */
-  height: 5px;
+  height: 0.2rem;
   background-color: #ff7b47;
+  color: #fff;
 }
 /* --------------Header----------------------------- */
 .header {
