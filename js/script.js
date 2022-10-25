@@ -52,37 +52,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // * Scroll open modal window
   function showMOdalScroll() {
-    if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight) {
+    if (window.scrollY + document.documentElement.clientHeight >= document.documentElement.scrollHeight) {
       openModal();
       window.removeEventListener('scroll', showMOdalScroll);
     }
   }
-  // window.addEventListener('scroll', showMOdalScroll);
+  window.addEventListener('scroll', showMOdalScroll);
 
   // * Scroll scale
   const scale = document.querySelector('.scale');
 
   function getPercent() {
-    let scalePercent =
-      ((window.pageYOffset + document.documentElement.clientHeight) / document.documentElement.scrollHeight) * 100;
-    scale.style.width = scalePercent + '%';
-    // scale.textContent = Math.round(scalePercent) + ' ' + '%';
+    // let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    let winScroll = window.scrollY;
+    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let scrolled = (winScroll / height) * 100;
+    scale.style.width = `${scrolled}%`;
+    return scrolled;
   }
   getPercent();
 
   function scaleAnimation() {
-    const id = setInterval(scaleFrame, 10);
+    const timerId = setInterval(scaleFrame, 20);
     function scaleFrame() {
-      if (
-        Math.trunc(
-          (window.pageYOffset + document.documentElement.clientHeight) / document.documentElement.scrollHeight
-        ) >= 1
-      ) {
-        clearInterval(id);
+      if (window.scrollY + document.documentElement.clientHeight >= document.documentElement.scrollHeight) {
+        clearInterval(timerId);
       } else {
         getPercent();
       }
     }
   }
+
   window.addEventListener('scroll', scaleAnimation);
 });
