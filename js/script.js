@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
       window.removeEventListener('scroll', showMOdalScroll);
     }
   }
-  window.addEventListener('scroll', showMOdalScroll);
+  // window.addEventListener('scroll', showMOdalScroll);
 
   // * Scroll scale
   const scale = document.querySelector('.scale');
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
   getPercent();
 
   function scaleAnimation() {
-    const timerId = setInterval(scaleFrame, 20);
+    const timerId = setInterval(scaleFrame, 200);
     function scaleFrame() {
       if (window.scrollY + document.documentElement.clientHeight >= document.documentElement.scrollHeight) {
         clearInterval(timerId);
